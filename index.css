@@ -141,3 +141,36 @@ input + svg {
   cursor: default;
   color: var(--disabled);
 }
+
+/* Beer Cards */
+
+.beers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.beer-wrapper {
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.beers .beer {
+  display: grid;
+  grid-auto-columns: 1fr;
+  align-items: flex-end;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.beer .beer__img {
+  margin: auto;
+  height: 20rem;
+}
+
+.beer .beer__info {
+  display: flex;
+  justify-content: space-between;
+}
