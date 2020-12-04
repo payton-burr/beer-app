@@ -5,6 +5,7 @@ async function getBeers() {
   const beers = await beerAPI.json();
   const beerDiv = document.querySelector('.beers');
   let beerHTML = '';
+  console.log(beers[0]);
 
   beers.forEach((beer) => {
     beerHTML += `
@@ -16,6 +17,14 @@ async function getBeers() {
                 <span>ABV: ${beer.abv}%</span>
                 <span>IBU: ${beer.ibu}</span>
             </span>
+        </div>
+        <div class="beer__content">
+            <div class="beer__name">${beer.name}</div>
+            <div class="beer__tagline">${beer.tagline}</div>
+            <div class="beer__description">${beer.description}</div>
+            <div class="beer__food-pairing">
+                Pair with: ${beer.food_pairing.join(', ')}
+            </div>
         </div>
     </div>
     `;
