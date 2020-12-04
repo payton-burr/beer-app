@@ -54,6 +54,18 @@ filterIBU.addEventListener('change', (e) => {
   getBeers();
 });
 
+// Pages
+
+prevPage.addEventListener('click', () => {
+  page--;
+  getBeers();
+});
+
+nextPage.addEventListener('click', () => {
+  page++;
+  getBeers();
+});
+
 //***************************************************** */
 
 async function getBeers() {
@@ -110,15 +122,5 @@ async function getBeers() {
     beerDiv.innerHTML = beerHTML;
   });
 }
-
-prevPage.addEventListener('click', () => {
-  page--;
-  getBeers();
-});
-
-nextPage.addEventListener('click', () => {
-  page++;
-  getBeers();
-});
 
 getBeers();
